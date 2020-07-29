@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    android:background="@drawable/bg_white_corner"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tv_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="隐患描述："
+        android:textColor="@color/secondtextcolor"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tv_name_label"
+        android:textColor="@color/maintextcolor"
+        android:textSize="12sp"
+        tools:text="隐患排查治理通知隐患排查治理通知隐患排查治理通知隐患排查治理通知" />
+
+    <TextView
+        android:id="@+id/tv_department_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="10dp"
+        android:text="整改人员："
+        android:textColor="@color/secondtextcolor"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/tv_department_label"
+        android:textColor="@color/maintextcolor"
+        android:textSize="12sp"
+        tools:text="小王" />
+
+    <TextView
+        android:id="@+id/tv_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_department"
+        android:layout_marginTop="10dp"
+        android:text="上报时间："
+        android:textColor="@color/secondtextcolor"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_department"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/tv_time_label"
+        android:textColor="@color/maintextcolor"
+        android:textSize="12sp"
+        tools:text="2020-4-30" />
+
+    <TextView
+        android:id="@+id/tv_id_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_time"
+        android:layout_marginTop="10dp"
+        android:text="风险编号："
+        android:textColor="@color/secondtextcolor"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_time"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/tv_time_label"
+        android:textColor="@color/maintextcolor"
+        android:textSize="12sp"
+        tools:text="1/1/1" />
+
+    <LinearLayout
+        android:id="@+id/ll_is_supervisor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_department"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_is_supervisor_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否督办："
+            android:textColor="@color/secondtextcolor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_is_supervisor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是"
+            android:textColor="@color/maintextcolor"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_id"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="14dp"
+        android:textColor="@color/lightred"
+        android:textSize="12sp"
+        tools:text="已处理" />
+</RelativeLayout>

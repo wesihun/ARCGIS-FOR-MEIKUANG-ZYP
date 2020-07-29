@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaf1fe"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/maincolor"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="隐患详情"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/tv_trouble_info_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_trouble_info"
+                android:text="隐患描述"
+                android:textColor="@color/maintextcolor"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_trouble_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/tv_trouble_info_label"
+                android:gravity="end"
+                android:textColor="@color/maintextcolor"
+                android:textSize="14sp"
+                tools:text="隐患基本情况" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/tv_trouble_info"
+                android:layout_marginTop="15dp"
+                android:background="@color/line" />
+
+
+            <TextView
+                android:id="@+id/tv_shooting_item_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_shooting_item"
+                android:text="排查事项"
+                android:textColor="@color/maintextcolor"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_shooting_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_trouble_info"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/tv_shooting_item_label"
+                android:gravity="end"
+                android:textColor="@color/maintextcolor"
+                android:textSize="14sp"
+                tools:text="冰雪或多雨季节道路较滑时，道路有无防护措施" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/tv_shooting_item"
+                android:layout_marginTop="15dp"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/tv_control_measures_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_control_measures"
+                android:text="管控措施"
+                android:textColor="@color/maintextcolor"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_control_measures"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_shooting_item"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/tv_shooting_item_label"
+                android:gravity="end"
+                android:textColor="@color/maintextcolor"
+                android:textSize="14sp"
+                tools:text="夜间工作时，危险点均应有足够的照明" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/tv_control_measures"
+                android:layout_marginTop="15dp"
+                android:background="@color/line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_hidden_level"
+                android:text="隐患等级"
+                android:textColor="@color/maintextcolor"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_hidden_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_control_measures"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/maintextcolor"
+                android:textSize="14sp"
+                tools:text="一般风险" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/tv_hidden_level"
+                android:layout_marginTop="15dp"
+                android:background="@color/line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_hidden_type"
+                android:text="隐患类型"
+                android:textColor="@color/maintextcolor"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_hidden_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_hidden_level"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/maintextcolor"
+                android:textSize="14sp"
+                android:visibility="gone"
+                tools:text="xxx" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/tv_hidden_type"
+                android:layout_marginTop="15dp"
+                android:background="@color/line"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_time"
+                android:text="上报日期"
+                android:textColor="@color/maintextcolor"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_hidden_type"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/maintextcolor"
+                android:textSize="14sp"
+                tools:text="2020-5-16" />
+
+            <View
+                android:id="@+id/view_line1"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/tv_time"
+                android:layout_marginTop="15dp"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/rl_is_supervisor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_line1"
+                android:layout_marginTop="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_is_supervisor"
+                    android:text="是否督办"
+                    android:textColor="@color/maintextcolor"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_is_supervisor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/maintextcolor"
+                    android:textSize="14sp"
+                    tools:text="否" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/tv_is_supervisor"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/line" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_hidden_state"
+                android:text="当前状态"
+                android:textColor="@color/maintextcolor"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_hidden_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_is_supervisor"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/lightred"
+                android:textSize="14sp"
+                tools:text="上报" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/tv_hidden_state"
+                android:layout_marginTop="15dp"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/tv_image_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_hidden_state"
+                android:layout_marginTop="30dp"
+                android:text="隐患图片"
+                android:textColor="@color/maintextcolor"
+                android:textSize="14sp" />
+
+            <com.winto.develop.ShenBao.wight.CustomGridView
+                android:id="@+id/gv_image_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_image_label"
+                android:layout_marginTop="15dp"
+                android:horizontalSpacing="5dp"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:verticalSpacing="5dp" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

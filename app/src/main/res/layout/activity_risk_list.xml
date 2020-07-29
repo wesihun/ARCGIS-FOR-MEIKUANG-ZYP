@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smart.refresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/srl_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.scwang.smart.refresh.header.ClassicsHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/line"
+            android:dividerHeight="1px"
+            tools:listitem="@layout/item_risk_point_list" />
+
+        <include
+            android:id="@+id/layout_empty"
+            layout="@layout/layout_empty"
+            android:visibility="gone" />
+    </RelativeLayout>
+</com.scwang.smart.refresh.layout.SmartRefreshLayout>

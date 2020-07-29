@@ -1,0 +1,222 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.google.zxing.client.android.test" >
+4
+5    <uses-sdk
+5-->E:\develop\Android Project\ShenBao\zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7463256344581885390.xml:5:5-74
+6        android:minSdkVersion="21"
+6-->E:\develop\Android Project\ShenBao\zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7463256344581885390.xml:5:15-41
+7        android:targetSdkVersion="29" />
+7-->E:\develop\Android Project\ShenBao\zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7463256344581885390.xml:5:42-71
+8
+9    <instrumentation
+9-->E:\develop\Android Project\ShenBao\zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7463256344581885390.xml:11:5-15:86
+10        android:name="androidx.test.runner.AndroidJUnitRunner"
+10-->E:\develop\Android Project\ShenBao\zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7463256344581885390.xml:11:22-76
+11        android:functionalTest="false"
+11-->E:\develop\Android Project\ShenBao\zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7463256344581885390.xml:14:22-52
+12        android:handleProfiling="false"
+12-->E:\develop\Android Project\ShenBao\zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7463256344581885390.xml:13:22-53
+13        android:label="Tests for com.google.zxing.client.android.test"
+13-->E:\develop\Android Project\ShenBao\zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7463256344581885390.xml:15:22-84
+14        android:targetPackage="com.google.zxing.client.android.test" />
+14-->E:\develop\Android Project\ShenBao\zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7463256344581885390.xml:12:22-82
+15
+16    <uses-permission android:name="android.permission.CAMERA" />
+16-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:5-65
+16-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:22-62
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:5-67
+17-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:22-64
+18    <uses-permission android:name="android.permission.VIBRATE" />
+18-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:5-66
+18-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:22-63
+19    <uses-permission android:name="android.permission.FLASHLIGHT" />
+19-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:5-69
+19-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:22-66
+20    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- unavailable in API 23 -->
+20-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:5-72
+20-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:22-69
+21    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+21-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:5-93
+21-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:22-90
+22    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+22-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:5-81
+22-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:22-78
+23    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+23-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:5-76
+23-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:22-73
+24    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+24-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:5-76
+24-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:22-73
+25
+26    <uses-feature android:name="android.hardware.camera.any" />
+26-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:5-64
+26-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:19-61
+27    <uses-feature
+27-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:38:5-40:36
+28        android:name="android.hardware.camera.autofocus"
+28-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:9-57
+29        android:required="false" />
+29-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:9-33
+30    <uses-feature
+30-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:41:5-43:36
+31        android:name="android.hardware.camera.flash"
+31-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:9-53
+32        android:required="false" />
+32-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:43:9-33
+33    <uses-feature android:name="android.hardware.screen.landscape" />
+33-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:44:5-70
+33-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:44:19-67
+34    <uses-feature
+34-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:45:5-47:36
+35        android:name="android.hardware.wifi"
+35-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:46:9-45
+36        android:required="false" />
+36-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:47:9-33
+37
+38    <application
+38-->E:\develop\Android Project\ShenBao\zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7463256344581885390.xml:7:5-9:19
+39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+39-->[androidx.core:core:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\da95e0dd41fd0c634661df2a0f122634\core-1.1.0\AndroidManifest.xml:24:18-86
+40        android:debuggable="true" >
+40-->E:\develop\Android Project\ShenBao\zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7463256344581885390.xml:7:18-43
+41        <uses-library android:name="android.test.runner" />
+41-->E:\develop\Android Project\ShenBao\zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7463256344581885390.xml:8:9-60
+41-->E:\develop\Android Project\ShenBao\zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger7463256344581885390.xml:8:23-57
+42
+43        <activity android:name="com.google.zxing.client.android.CaptureActivity" />
+43-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:50:9-84
+43-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:50:19-81
+44        <activity
+44-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:51:9-54:45
+45            android:name="com.google.zxing.client.android.PreferencesActivity"
+45-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:52:13-79
+46            android:label="@string/preferences_name"
+46-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:53:13-53
+47            android:stateNotNeeded="true" />
+47-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:54:13-42
+48        <activity
+48-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:55:9-79:20
+49            android:name="com.google.zxing.client.android.encode.EncodeActivity"
+49-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:56:13-81
+50            android:stateNotNeeded="true" >
+50-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:57:13-42
+51            <intent-filter>
+51-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:58:13-62:29
+52                <action android:name="com.google.zxing.client.android.ENCODE" />
+52-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:59:17-81
+52-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:59:25-78
+53
+54                <category android:name="android.intent.category.DEFAULT" />
+54-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:61:17-76
+54-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:61:27-73
+55            </intent-filter>
+56            <!-- This allows us to handle the Share button in Contacts. -->
+57            <intent-filter>
+57-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:64:13-70:29
+58                <action android:name="android.intent.action.SEND" />
+58-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:65:17-69
+58-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:65:25-66
+59
+60                <category android:name="android.intent.category.DEFAULT" />
+60-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:61:17-76
+60-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:61:27-73
+61
+62                <data android:mimeType="text/x-vcard" />
+62-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:69:17-57
+62-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:69:23-54
+63            </intent-filter>
+64            <!-- This allows us to handle sharing any plain text . -->
+65            <intent-filter>
+65-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:72:13-78:29
+66                <action android:name="android.intent.action.SEND" />
+66-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:65:17-69
+66-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:65:25-66
+67
+68                <category android:name="android.intent.category.DEFAULT" />
+68-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:61:17-76
+68-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:61:27-73
+69
+70                <data android:mimeType="text/plain" />
+70-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:69:17-57
+70-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:69:23-54
+71            </intent-filter>
+72        </activity>
+73        <activity
+73-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:80:9-90:20
+74            android:name="com.google.zxing.client.android.book.SearchBookContentsActivity"
+74-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:81:13-91
+75            android:label="@string/sbc_name"
+75-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:82:13-45
+76            android:screenOrientation="sensorLandscape"
+76-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:83:13-56
+77            android:stateNotNeeded="true" >
+77-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:84:13-42
+78            <intent-filter>
+78-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:85:13-89:29
+79                <action android:name="com.google.zxing.client.android.SEARCH_BOOK_CONTENTS" />
+79-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:86:17-95
+79-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:86:25-92
+80
+81                <category android:name="android.intent.category.DEFAULT" />
+81-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:61:17-76
+81-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:61:27-73
+82            </intent-filter>
+83        </activity>
+84        <activity
+84-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:91:9-100:20
+85            android:name="com.google.zxing.client.android.share.ShareActivity"
+85-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:92:13-79
+86            android:screenOrientation="user"
+86-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:93:13-45
+87            android:stateNotNeeded="true" >
+87-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:94:13-42
+88            <intent-filter>
+88-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:95:13-99:29
+89                <action android:name="com.google.zxing.client.android.SHARE" />
+89-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:96:17-80
+89-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:96:25-77
+90
+91                <category android:name="android.intent.category.DEFAULT" />
+91-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:61:17-76
+91-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:61:27-73
+92            </intent-filter>
+93        </activity>
+94        <activity
+94-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:101:9-104:45
+95            android:name="com.google.zxing.client.android.history.HistoryActivity"
+95-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:102:13-83
+96            android:label="@string/history_title"
+96-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:103:13-50
+97            android:stateNotNeeded="true" />
+97-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:104:13-42
+98        <activity
+98-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:105:9-108:45
+99            android:name="com.google.zxing.client.android.share.BookmarkPickerActivity"
+99-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:106:13-88
+100            android:label="@string/bookmark_picker_name"
+100-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:107:13-57
+101            android:stateNotNeeded="true" />
+101-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:108:13-42
+102        <activity
+102-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:109:9-112:45
+103            android:name="com.google.zxing.client.android.share.AppPickerActivity"
+103-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:110:13-83
+104            android:label="@string/app_picker_name"
+104-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:111:13-52
+105            android:stateNotNeeded="true" />
+105-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:112:13-42
+106        <activity
+106-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:113:9-117:45
+107            android:name="com.google.zxing.client.android.HelpActivity"
+107-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:114:13-72
+108            android:label="@string/menu_help"
+108-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:115:13-46
+109            android:screenOrientation="user"
+109-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:116:13-45
+110            android:stateNotNeeded="true" />
+110-->[__tested_artifact__::zxing] E:\develop\Android Project\ShenBao\zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:117:13-42
+111    </application>
+112
+113</manifest>

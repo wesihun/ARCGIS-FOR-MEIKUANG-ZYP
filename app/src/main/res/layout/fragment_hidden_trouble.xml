@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smart.refresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/srl_refresh"
+    android:layout_height="match_parent"
+    android:background="#eaf1fe">
+
+    <com.scwang.smart.refresh.header.ClassicsHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_corner"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bg_statistics_top_tips">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="风险点数量"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_count1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:textColor="@color/red"
+                        android:textSize="28sp"
+                        app:layout_constraintEnd_toEndOf="@id/tv_count1_label"
+                        app:layout_constraintStart_toStartOf="@+id/tv_count1_label"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_count1_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:drawableStart="@drawable/ic_hidden_count"
+                        android:drawablePadding="5dp"
+                        android:text="重大隐患数"
+                        android:textColor="@color/maintextcolor"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_count2_label"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_count1" />
+
+                    <TextView
+                        android:id="@+id/tv_count2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:textColor="@color/red"
+                        android:textSize="28sp"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_count2_label"
+                        app:layout_constraintStart_toStartOf="@+id/tv_count2_label"
+                        app:layout_constraintTop_toTopOf="@+id/tv_count1" />
+
+                    <TextView
+                        android:id="@+id/tv_count2_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_hidden_count"
+                        android:drawablePadding="5dp"
+                        android:text="一般隐患数"
+                        android:textColor="@color/maintextcolor"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_count1_label"
+                        app:layout_constraintTop_toTopOf="@+id/tv_count1_label" />
+
+                    <TextView
+                        android:id="@+id/tv_count3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="20"
+                        android:textColor="@color/green"
+                        android:textSize="28sp"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_count3_label"
+                        app:layout_constraintStart_toStartOf="@+id/tv_count3_label"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_count1_label" />
+
+                    <TextView
+                        android:id="@+id/tv_count3_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:drawableStart="@drawable/ic_count"
+                        android:drawablePadding="5dp"
+                        android:text="已整改数"
+                        android:textColor="@color/maintextcolor"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_count4_label"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_count3" />
+
+                    <TextView
+                        android:id="@+id/tv_count4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:textColor="@color/green"
+                        android:textSize="28sp"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_count4_label"
+                        app:layout_constraintStart_toStartOf="@+id/tv_count4_label"
+                        app:layout_constraintTop_toTopOf="@+id/tv_count3" />
+
+                    <TextView
+                        android:id="@+id/tv_count4_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_count"
+                        android:drawablePadding="5dp"
+                        android:text="未整改数"
+                        android:textColor="@color/maintextcolor"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_count3_label"
+                        app:layout_constraintTop_toTopOf="@+id/tv_count3_label" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_white_corner"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bg_statistics_top_tips">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="隐患类别统计分析"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pc_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp">
+
+                    <include
+                        android:id="@+id/view_table_top1"
+                        layout="@layout/layout_table_top1" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/lv_trouble_cate_list"
+                        android:layout_alignParentTop="true"
+                        android:background="#cedefd" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/lv_trouble_cate_list"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:background="#cedefd" />
+
+                    <com.winto.develop.ShenBao.wight.CustomListView
+                        android:id="@+id/lv_trouble_cate_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_table_top1"
+                        android:divider="#eaf1fe"
+                        android:dividerHeight="1px"
+                        android:scrollbars="none"
+                        tools:listitem="@layout/item_trouble_cate_list" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/lv_trouble_cate_list"
+                        android:background="#cedefd" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_white_corner"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/bg_statistics_top_tips">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="风险单元统计分析"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/bc_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp">
+
+                    <include
+                        android:id="@+id/view_table_top2"
+                        layout="@layout/layout_table_top2" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/lv_trouble_unit_list"
+                        android:layout_alignParentTop="true"
+                        android:background="#cedefd" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/lv_trouble_unit_list"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:background="#cedefd" />
+
+                    <com.winto.develop.ShenBao.wight.CustomListView
+                        android:id="@+id/lv_trouble_unit_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_table_top2"
+                        android:divider="#eaf1fe"
+                        android:dividerHeight="1px"
+                        android:scrollbars="none"
+                        tools:listitem="@layout/item_trouble_unit_list" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/lv_trouble_unit_list"
+                        android:background="#cedefd" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</com.scwang.smart.refresh.layout.SmartRefreshLayout>
