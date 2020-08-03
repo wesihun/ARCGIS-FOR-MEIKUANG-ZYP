@@ -16,6 +16,7 @@ import com.winto.develop.ShenBao.bean.RiskPointListBean;
 import com.winto.develop.ShenBao.bean.RiskUnitTJBean;
 import com.winto.develop.ShenBao.bean.TaskDetailBean;
 import com.winto.develop.ShenBao.bean.TroubleListBean;
+import com.winto.develop.ShenBao.bean.UserInfoBean;
 
 import java.util.List;
 import java.util.Map;
@@ -127,4 +128,8 @@ public interface HttpService {
 
     @GET("/bussiness/HiddenDanger/GetHistoryList")
     Flowable<HistoryListBean> getHistoryList(@QueryMap Map<String, Object> params);
+
+    @GET("/bussiness/App/GetUserInfo")
+    Flowable<UserInfoBean> getUserInfo();
+
 }

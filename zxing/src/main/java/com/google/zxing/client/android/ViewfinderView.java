@@ -21,10 +21,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Rect;
-import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -89,7 +86,7 @@ public final class ViewfinderView extends View {
     @SuppressLint("DrawAllocation")
     @Override
     public void onDraw(Canvas canvas) {
-        if (cameraManager == null) {
+        /*if (cameraManager == null) {
             return; // not ready yet, early draw before done configuring
         }
         Rect frame = cameraManager.getFramingRect();
@@ -200,7 +197,7 @@ public final class ViewfinderView extends View {
                     frame.top - POINT_SIZE,
                     frame.right + POINT_SIZE,
                     frame.bottom + POINT_SIZE);
-        }
+        }*/
     }
 
     public void drawViewfinder() {

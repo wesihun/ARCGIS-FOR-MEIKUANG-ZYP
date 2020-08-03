@@ -51,7 +51,7 @@ public class PaichaListAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
         PaichaListBean.DataBean bean = getItem(position);
-        holder.tv_name.setText(bean.getTroubleshootingItems());
+        holder.tv_name.setText(String.format("排查事项：%s", bean.getTroubleshootingItems()));
         holder.tv_risk_factor.setText(String.format("风险因素：%s", bean.getRiskFactor()));
 
         switch (bean.getRiskLevel()) {

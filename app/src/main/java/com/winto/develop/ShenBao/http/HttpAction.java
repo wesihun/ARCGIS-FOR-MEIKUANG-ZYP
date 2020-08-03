@@ -19,6 +19,7 @@ import com.winto.develop.ShenBao.bean.RiskPointListBean;
 import com.winto.develop.ShenBao.bean.RiskUnitTJBean;
 import com.winto.develop.ShenBao.bean.TaskDetailBean;
 import com.winto.develop.ShenBao.bean.TroubleListBean;
+import com.winto.develop.ShenBao.bean.UserInfoBean;
 
 import java.util.HashMap;
 import java.util.List;
@@ -140,6 +141,10 @@ public class HttpAction {
 
     public Flowable<HistoryListBean> getHistoryList(Map<String, Object> params) {
         return applySchedulers(HttpClient.getHttpService().getHistoryList(params));
+    }
+
+    public Flowable<UserInfoBean> getUserInfo() {
+        return applySchedulers(HttpClient.getHttpService().getUserInfo());
     }
 
     /**

@@ -2,14 +2,14 @@ package com.winto.develop.ShenBao.bean;
 
 import com.winto.develop.ShenBao.base.BaseResponse;
 
-import java.io.Serializable;
 import java.util.List;
 
 public class PaichaListBean extends BaseResponse {
 
+
     /**
      * count : 0
-     * data : [{"Id":"7805346f-3ae2-4501-b4b7-5ef6432cb652","ClassificationId":"63d4534e-79d4-4e13-88be-1877322296ea","RoleId":"dff5ebf1-551a-4ff3-94ba-2ddde1d924b6","RoleName":"岗位员工","JobId":"a757d0d0-22e3-4f4f-b09d-ed8f24c47b3b","JobName":"生产技术员","UserId":"6af3baaf-6a14-4cc9-a997-1921ffbea9bf","UserName":"小王","RiskPointBH":"1/1/1-2","RiskPointName":"运输车辆","RiskFactor":"车辆使用前未经过外观检查，车辆存在隐患依然坚持使用。","RiskLevel":"1","CreateTime":"2020-05-28 15:40:16","DeleteMark":1,"TroubleshootingItems":"车辆出发前应对制动系统、动力系统、外观、轮胎、转向系统、照明等全面检查，定期维护保养。","OrgId":"5261e995-ca08-4ea5-8184-59d224728333","OrgName":"神宝煤矿","states1":"0","states2":null}]
+     * data : [{"Id":"17440eb8-6ef9-48bd-876f-dde2378f8d6f","ClassificationId":"b83d31dd-a2e2-47c2-8bbe-12d6466dfae1","RoleId":"dff5ebf1-551a-4ff3-94ba-2ddde1d924b6","RoleName":"岗位员工","JobId":"81895be0-55f2-49ea-a846-b7ca4af4fc72","JobName":"保管员","UserId":"3b80d342-cd94-4453-96ef-467fce9f2bc5","UserName":"杨保管员","RiskPointBH":"1/2/3-4","RiskPointName":"气垫输送机操作","RiskFactor":"输送机运行时清理机头、机尾滚筒机附近的粮食及杂物。","HiddenDangersLevel":"","HiddenDangersType":"","AccidentType":"","RiskLevel":"4","CreateTime":"2020-07-27 15:25:07","DeleteMark":1,"TroubleshootingItems":"输送机运行时是否清理机头、机尾滚筒机附近的粮食及杂物。","ControlMeasures":"输送机运行时禁止清理机头、机尾滚筒机附近的粮食及杂物。","MeasuresType":"1","EmergencyMeasures":"直接安全技术措施","OrgId":"798b56e2-94a0-4a82-872c-794b95e2945c","OrgName":"中央储备粮鸡西直属库有限公司","states1":"0","states2":"0"},{"Id":"2341b078-7e27-4d5f-a937-c378ad5dca19","ClassificationId":"db248aba-7eb3-4af1-9dd2-dd1e77ee93b4","RoleId":"dff5ebf1-551a-4ff3-94ba-2ddde1d924b6","RoleName":"岗位员工","JobId":"81895be0-55f2-49ea-a846-b7ca4af4fc72","JobName":"保管员","UserId":"3b80d342-cd94-4453-96ef-467fce9f2bc5","UserName":"杨保管员","RiskPointBH":"1/2/3-4","RiskPointName":"气垫输送机操作","RiskFactor":"输送机使用和检修作业人员攀爬输送机。","HiddenDangersLevel":null,"HiddenDangersType":null,"AccidentType":null,"RiskLevel":"3","CreateTime":"2020-07-27 15:25:07","DeleteMark":1,"TroubleshootingItems":"输送机使用和检修是否有作业人员攀爬输送机。","ControlMeasures":"禁止人员爬到输送机上作业。","MeasuresType":"1","EmergencyMeasures":"直接安全技术措施","OrgId":"798b56e2-94a0-4a82-872c-794b95e2945c","OrgName":"中央储备粮鸡西直属库有限公司","states1":"0","states2":"0"}]
      */
 
     private int count;
@@ -31,27 +31,33 @@ public class PaichaListBean extends BaseResponse {
         this.data = data;
     }
 
-    public static class DataBean implements Serializable {
+    public static class DataBean extends BaseResponse{
         /**
-         * Id : 7805346f-3ae2-4501-b4b7-5ef6432cb652
-         * ClassificationId : 63d4534e-79d4-4e13-88be-1877322296ea
+         * Id : 17440eb8-6ef9-48bd-876f-dde2378f8d6f
+         * ClassificationId : b83d31dd-a2e2-47c2-8bbe-12d6466dfae1
          * RoleId : dff5ebf1-551a-4ff3-94ba-2ddde1d924b6
          * RoleName : 岗位员工
-         * JobId : a757d0d0-22e3-4f4f-b09d-ed8f24c47b3b
-         * JobName : 生产技术员
-         * UserId : 6af3baaf-6a14-4cc9-a997-1921ffbea9bf
-         * UserName : 小王
-         * RiskPointBH : 1/1/1-2
-         * RiskPointName : 运输车辆
-         * RiskFactor : 车辆使用前未经过外观检查，车辆存在隐患依然坚持使用。
-         * RiskLevel : 1
-         * CreateTime : 2020-05-28 15:40:16
+         * JobId : 81895be0-55f2-49ea-a846-b7ca4af4fc72
+         * JobName : 保管员
+         * UserId : 3b80d342-cd94-4453-96ef-467fce9f2bc5
+         * UserName : 杨保管员
+         * RiskPointBH : 1/2/3-4
+         * RiskPointName : 气垫输送机操作
+         * RiskFactor : 输送机运行时清理机头、机尾滚筒机附近的粮食及杂物。
+         * HiddenDangersLevel :
+         * HiddenDangersType :
+         * AccidentType :
+         * RiskLevel : 4
+         * CreateTime : 2020-07-27 15:25:07
          * DeleteMark : 1
-         * TroubleshootingItems : 车辆出发前应对制动系统、动力系统、外观、轮胎、转向系统、照明等全面检查，定期维护保养。
-         * OrgId : 5261e995-ca08-4ea5-8184-59d224728333
-         * OrgName : 神宝煤矿
+         * TroubleshootingItems : 输送机运行时是否清理机头、机尾滚筒机附近的粮食及杂物。
+         * ControlMeasures : 输送机运行时禁止清理机头、机尾滚筒机附近的粮食及杂物。
+         * MeasuresType : 1
+         * EmergencyMeasures : 直接安全技术措施
+         * OrgId : 798b56e2-94a0-4a82-872c-794b95e2945c
+         * OrgName : 中央储备粮鸡西直属库有限公司
          * states1 : 0
-         * states2 : null
+         * states2 : 0
          */
 
         private String Id;
@@ -65,14 +71,20 @@ public class PaichaListBean extends BaseResponse {
         private String RiskPointBH;
         private String RiskPointName;
         private String RiskFactor;
+        private String HiddenDangersLevel;
+        private String HiddenDangersType;
+        private String AccidentType;
         private String RiskLevel;
         private String CreateTime;
         private int DeleteMark;
         private String TroubleshootingItems;
+        private String ControlMeasures;
+        private String MeasuresType;
+        private String EmergencyMeasures;
         private String OrgId;
         private String OrgName;
-        private String states1 = "0";
-        private String states2 = "0";
+        private String states1;
+        private String states2;
 
         public String getId() {
             return Id;
@@ -162,6 +174,30 @@ public class PaichaListBean extends BaseResponse {
             this.RiskFactor = RiskFactor;
         }
 
+        public String getHiddenDangersLevel() {
+            return HiddenDangersLevel;
+        }
+
+        public void setHiddenDangersLevel(String HiddenDangersLevel) {
+            this.HiddenDangersLevel = HiddenDangersLevel;
+        }
+
+        public String getHiddenDangersType() {
+            return HiddenDangersType;
+        }
+
+        public void setHiddenDangersType(String HiddenDangersType) {
+            this.HiddenDangersType = HiddenDangersType;
+        }
+
+        public String getAccidentType() {
+            return AccidentType;
+        }
+
+        public void setAccidentType(String AccidentType) {
+            this.AccidentType = AccidentType;
+        }
+
         public String getRiskLevel() {
             return RiskLevel;
         }
@@ -192,6 +228,30 @@ public class PaichaListBean extends BaseResponse {
 
         public void setTroubleshootingItems(String TroubleshootingItems) {
             this.TroubleshootingItems = TroubleshootingItems;
+        }
+
+        public String getControlMeasures() {
+            return ControlMeasures;
+        }
+
+        public void setControlMeasures(String ControlMeasures) {
+            this.ControlMeasures = ControlMeasures;
+        }
+
+        public String getMeasuresType() {
+            return MeasuresType;
+        }
+
+        public void setMeasuresType(String MeasuresType) {
+            this.MeasuresType = MeasuresType;
+        }
+
+        public String getEmergencyMeasures() {
+            return EmergencyMeasures;
+        }
+
+        public void setEmergencyMeasures(String EmergencyMeasures) {
+            this.EmergencyMeasures = EmergencyMeasures;
         }
 
         public String getOrgId() {

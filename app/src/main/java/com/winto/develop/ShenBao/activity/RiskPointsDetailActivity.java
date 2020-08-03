@@ -16,6 +16,7 @@ import com.winto.develop.ShenBao.base.BaseActivity;
 import com.winto.develop.ShenBao.base.BaseObserver;
 import com.winto.develop.ShenBao.base.BaseResponse;
 import com.winto.develop.ShenBao.bean.PaichaListBean;
+import com.winto.develop.ShenBao.dialog.TwoButtonCenterDialog;
 import com.winto.develop.ShenBao.http.HttpAction;
 import com.winto.develop.ShenBao.util.ToastUtil;
 
@@ -42,6 +43,7 @@ public class RiskPointsDetailActivity extends BaseActivity {
     private String riskName;
     private String riskId;
     private TextView tv_name;
+    private TextView tv_time;
     private TextView tv_id;
 
     @Override
@@ -58,6 +60,7 @@ public class RiskPointsDetailActivity extends BaseActivity {
         lv_list = findViewById(R.id.lv_list);
         tv_name = headerView.findViewById(R.id.tv_name);
         tv_id = headerView.findViewById(R.id.tv_id);
+        tv_time = headerView.findViewById(R.id.tv_time);
         lv_list.addHeaderView(headerView);
         tv_name.setText(riskName);
         tv_id.setText(riskId);
@@ -84,7 +87,7 @@ public class RiskPointsDetailActivity extends BaseActivity {
         adapter.setOnBtnClickListener(new PaichaListAdapter.OnBtnClickListener() {
             @Override
             public void onOkClick(PaichaListBean.DataBean bean) {
-                checkPass(bean.getId());
+                showTipsDialog(bean);
             }
 
             @Override
@@ -92,6 +95,29 @@ public class RiskPointsDetailActivity extends BaseActivity {
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("paicha", bean);
                 toClass(context, TroubleFillActivity.class, bundle);
+            }
+        });
+    }
+
+    TwoButtonCenterDialog dialog;
+
+    private void showTipsDialog(PaichaListBean.DataBean bean) {
+        if (dialog == null) {
+            dialog = new TwoButtonCenterDialog(context);
+        }
+
+        dialog.setTips("提示", "是否确认当前排查事项合格通过?");
+        dialog.show();
+        dialog.setOnClickRateDialog(new TwoButtonCenterDialog.OnClickRateDialog() {
+            @Override
+            public void onClickLeft() {
+                dialog.dismiss();
+            }
+
+            @Override
+            public void onClickRight() {
+                dialog.dismiss();
+                checkPass(bean.getId());
             }
         });
     }
@@ -119,6 +145,7 @@ public class RiskPointsDetailActivity extends BaseActivity {
             @Override
             public void onSuccess(PaichaListBean bean) {
                 srl_refresh.finishRefresh();
+                tv_time.setText(bean.getMsg());
                 list.clear();
                 list.addAll(bean.getData());
                 adapter.notifyDataSetChanged();

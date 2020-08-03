@@ -93,6 +93,7 @@ public class WaitNoticeActivity extends BaseActivity {
         tv_type.setText(trouble.getHiddenDangersType());
         tv_time.setText(trouble.getCreateTime());
         tv_level.setText(trouble.getHiddenDangersLevel());
+        tv_method.setText(trouble.getControlMeasures());
         if ("1".equals(trouble.getIsSupervisor())) {
             rl_is_supervisor.setVisibility(View.VISIBLE);
         } else {

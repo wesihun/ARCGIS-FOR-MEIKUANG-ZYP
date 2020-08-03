@@ -32,16 +32,19 @@
     <com.scwang.smart.refresh.layout.SmartRefreshLayout
         android:id="@+id/srl_refresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#eaf1fe">
+
         <com.scwang.smart.refresh.header.ClassicsHeader
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
         <ListView
             android:id="@+id/lv_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:divider="@color/line"
-            android:dividerHeight="1px"
+            android:dividerHeight="0.5dp"
             tools:listitem="@layout/item_paicha_list" />
     </com.scwang.smart.refresh.layout.SmartRefreshLayout>
 </LinearLayout>

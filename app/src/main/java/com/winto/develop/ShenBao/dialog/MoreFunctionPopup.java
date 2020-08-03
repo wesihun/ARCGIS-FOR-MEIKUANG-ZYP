@@ -18,12 +18,10 @@ public class MoreFunctionPopup extends PopupWindow {
     private TextView tv_msg;
     private TextView tv_logout;
     private TextView tv_history;
-    private boolean isManagementPosition;
 
-    public MoreFunctionPopup(Context context, View parent, boolean isManagementPosition) {
+    public MoreFunctionPopup(Context context, View parent) {
         this.context = context;
         this.parent = parent;
-        this.isManagementPosition = isManagementPosition;
         initPopup();
         initView();
         initClick();
@@ -43,11 +41,6 @@ public class MoreFunctionPopup extends PopupWindow {
         tv_msg = view.findViewById(R.id.tv_msg);
         tv_history = view.findViewById(R.id.tv_history);
         tv_logout = view.findViewById(R.id.tv_log_out);
-        if (isManagementPosition) {
-            tv_history.setVisibility(View.VISIBLE);
-        } else {
-            tv_history.setVisibility(View.GONE);
-        }
     }
 
     private void initClick() {

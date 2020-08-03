@@ -27,6 +27,10 @@
             android:textColor="@color/maintextcolor"
             android:textSize="14sp" />
 
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/line"
+            android:layout_height="1px" />
 
         <TextView
             android:id="@+id/tv_history"
@@ -38,8 +42,7 @@
             android:paddingBottom="15dp"
             android:text="历史记录"
             android:textColor="@color/maintextcolor"
-            android:textSize="14sp"
-            android:visibility="gone" />
+            android:textSize="14sp" />
 
 
         <TextView
@@ -49,6 +52,7 @@
             android:drawableStart="@drawable/ic_logout"
             android:drawablePadding="8dp"
             android:paddingTop="15dp"
+            android:visibility="gone"
             android:paddingBottom="15dp"
             android:text="退出登录"
             android:textColor="@color/maintextcolor"

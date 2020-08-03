@@ -38,31 +38,32 @@ public class RiskListAdapter extends BaseAdapter {
             holder = (RiskViewHolder) convertView.getTag();
         }
         RiskPointListBean.DataBean bean = getItem(position);
-        holder.tv_name.setText(bean.getRiskName());
-        holder.tv_risk_id.setText("风险点编号：" + bean.getRiskBH());
+        holder.tv_name.setText(String.format("风险点名称：%s", bean.getRiskName()));
+        holder.tv_risk_id.setText(String.format("风险点编号：%s", bean.getRiskBH()));
+
         switch (bean.getStates()) {
             case "0":
                 holder.tv_state.setText("未完成");
                 holder.tv_state.setTextColor(ContextCompat.getColor(context, R.color.red));
-                holder.tv_scan.setVisibility(View.VISIBLE);
+                holder.iv_scan.setVisibility(View.VISIBLE);
                 holder.iv_complate.setVisibility(View.GONE);
                 break;
             case "1":
                 holder.tv_state.setText("已完成");
-                holder.tv_state.setTextColor(ContextCompat.getColor(context, R.color.maincolor));
-                holder.tv_scan.setVisibility(View.GONE);
+                holder.tv_state.setTextColor(ContextCompat.getColor(context, R.color.blue));
+                holder.iv_scan.setVisibility(View.GONE);
                 holder.iv_complate.setVisibility(View.VISIBLE);
                 holder.iv_complate.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_complate));
                 break;
             case "2":
-                holder.tv_state.setText("待执行");
-                holder.tv_state.setTextColor(ContextCompat.getColor(context, R.color.maincolor));
-                holder.tv_scan.setVisibility(View.GONE);
+                holder.tv_state.setText("未到检查时间");
+                holder.tv_state.setTextColor(ContextCompat.getColor(context, R.color.orange));
+                holder.iv_scan.setVisibility(View.GONE);
                 holder.iv_complate.setVisibility(View.VISIBLE);
                 holder.iv_complate.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_pending));
                 break;
         }
-        holder.tv_scan.setOnClickListener(v -> {
+        holder.iv_scan.setOnClickListener(v -> {
             if (listener != null) {
                 listener.onButtonClick(bean);
             }
@@ -88,13 +89,13 @@ public class RiskListAdapter extends BaseAdapter {
 
     static class RiskViewHolder {
         private TextView tv_name;
-        private TextView tv_scan;
+        private ImageView iv_scan;
         private TextView tv_risk_id;
         private TextView tv_state;
         private ImageView iv_complate;
 
         RiskViewHolder(@NonNull View itemView) {
-            tv_scan = itemView.findViewById(R.id.tv_scan);
+            iv_scan = itemView.findViewById(R.id.iv_scan);
             tv_name = itemView.findViewById(R.id.tv_name);
             tv_risk_id = itemView.findViewById(R.id.tv_risk_id);
             tv_state = itemView.findViewById(R.id.tv_state);

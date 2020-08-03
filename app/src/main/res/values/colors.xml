@@ -7,16 +7,19 @@
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="maincolor">#4276db</color>
-    <color name="secondcolor">#5695f4</color>
+    <color name="secondcolor">#b5cdfd</color>
     <color name="mainbg">#f7f7f7</color>
     <color name="mainbg2">#EDEDED</color>
+    <color name="bg">#eaf1fe</color>
     <color name="line">#E3E3E3</color>
     <color name="green">#65D996</color>
     <color name="maintextcolor">#333333</color>
     <color name="secondtextcolor">#999999</color>
     <color name="gray">#727272</color>
-    <color name="red">#EE4040</color>
+    <color name="red">#fe685d</color>
     <color name="pink">#FB5151</color>
+    <color name="orange">#fc9774</color>
+    <color name="blue">#3d7dfc</color>
     <color name="lightred">#fb671f</color>
 
     <color name="contents_text">#ff000000</color>

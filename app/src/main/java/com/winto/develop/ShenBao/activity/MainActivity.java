@@ -9,22 +9,29 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.winto.develop.ShenBao.MainApplication;
 import com.winto.develop.ShenBao.R;
 import com.winto.develop.ShenBao.base.BaseActivity;
 import com.winto.develop.ShenBao.base.BaseFragment;
+import com.winto.develop.ShenBao.base.BaseObserver;
+import com.winto.develop.ShenBao.bean.UserInfoBean;
 import com.winto.develop.ShenBao.dialog.MoreFunctionPopup;
+import com.winto.develop.ShenBao.dialog.TwoButtonCenterDialog;
+import com.winto.develop.ShenBao.fragment.FindFragment;
 import com.winto.develop.ShenBao.fragment.HiddenTroubleFragment;
 import com.winto.develop.ShenBao.fragment.HomeFragment;
 import com.winto.develop.ShenBao.fragment.OperationFragment;
-import com.winto.develop.ShenBao.fragment.FindFragment;
+import com.winto.develop.ShenBao.http.HttpAction;
 import com.winto.develop.ShenBao.util.ToastUtil;
 
 import java.util.List;
@@ -37,21 +44,44 @@ import java.util.List;
 public class MainActivity extends BaseActivity {
     private String[] permissionList = {Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION};
 
+    private DrawerLayout dl_drawer;
+    private View view_user_info;
+    private ImageView iv_my;
     private TextView tv_title;
     private ImageView iv_msg;
+
+    private TextView tv_user_name;
+    private TextView tv_job_name;
+    private TextView tv_role_name;
+    private TextView tv_dep_name;
+    private TextView tv_org_name;
+    private TextView tv_log_out;
+
     private RadioGroup rg_main;
-    private String[] titleArray = {"首页", "操作", "我上报的", "统计"};
+    private String[] titleArray = {"首页", "操作", "隐患上报记录", "统计"};
     private BaseFragment[] fragmentArray;
     private int currentIndex;
 
+    private UserInfoBean.DataBean userInfo;
+
+    private TwoButtonCenterDialog dialog;
     private LocationManager lm;
 
     @Override
     protected void initView() {
+        dl_drawer = findViewById(R.id.dl_drawer);
+        view_user_info = findViewById(R.id.view_user_info);
         tv_title = findViewById(R.id.tv_title);
+        iv_my = findViewById(R.id.iv_my);
         iv_msg = findViewById(R.id.iv_msg);
         rg_main = findViewById(R.id.rg_main);
-
+        tv_log_out = view_user_info.findViewById(R.id.tv_log_out);
+        tv_user_name = view_user_info.findViewById(R.id.tv_user_name);
+        tv_job_name = view_user_info.findViewById(R.id.tv_job_name);
+        tv_role_name = view_user_info.findViewById(R.id.tv_role_name);
+        tv_dep_name = view_user_info.findViewById(R.id.tv_dep_name);
+        tv_org_name = view_user_info.findViewById(R.id.tv_org_name);
+        view_user_info.setClickable(true);
         initFragment();
 
         lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -101,6 +131,11 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+        getUserInfo();
+    }
+
+    @Override
+    protected void initClick() {
         rg_main.setOnCheckedChangeListener((group, checkedId) -> {
             switch (checkedId) {
                 case R.id.rb_home:
@@ -117,11 +152,6 @@ public class MainActivity extends BaseActivity {
                     break;
             }
         });
-    }
-
-    @Override
-    protected void initClick() {
-
         /*iv_my.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -139,14 +169,109 @@ public class MainActivity extends BaseActivity {
             }
         });*/
 
+        view_user_info.setOnClickListener(v -> {
+
+        });
+
+        iv_my.setOnClickListener(v -> {
+            if (userInfo == null) {
+                getUserInfo();
+            }
+            dl_drawer.openDrawer(view_user_info);
+        });
+
         iv_msg.setOnClickListener(v -> showMoreFunction());
+
+        tv_log_out.setOnClickListener(v -> {
+            isLogout = true;
+            dl_drawer.closeDrawer(view_user_info);
+        });
+        dl_drawer.addDrawerListener(new DrawerLayout.DrawerListener() {
+            @Override
+            public void onDrawerSlide(@NonNull View drawerView, float slideOffset) {
+
+            }
+
+            @Override
+            public void onDrawerOpened(@NonNull View drawerView) {
+
+            }
+
+            @Override
+            public void onDrawerClosed(@NonNull View drawerView) {
+                if (isLogout) {
+                    showLogoutDialog();
+                    isLogout = false;
+                }
+            }
+
+            @Override
+            public void onDrawerStateChanged(int newState) {
+
+            }
+        });
+    }
+
+    private boolean isLogout = false;
+
+    private void getUserInfo() {
+        HttpAction.getInstance().getUserInfo().subscribe(new BaseObserver<UserInfoBean>() {
+            @Override
+            public void onSuccess(UserInfoBean bean) {
+                userInfo = bean.getData();
+                setUserInfo();
+            }
+
+            @Override
+            public void onError(String message) {
+
+            }
+        });
+    }
+
+    private void setUserInfo() {
+        if (userInfo == null) {
+            return;
+        }
+        tv_user_name.setText(userInfo.getRealName());
+        tv_job_name.setText(String.format("岗位：%s", userInfo.getJobName()));
+        tv_role_name.setText(String.format("角色：%s", userInfo.getRoleName()));
+        tv_dep_name.setText(String.format("部门：%s", userInfo.getDepName()));
+        tv_org_name.setText(userInfo.getOrgName());
+    }
+
+    private void showLogoutDialog() {
+        if (dialog == null) {
+            dialog = new TwoButtonCenterDialog(context);
+        }
+
+        dialog.setTips("退出登录", "确定要退出当前账号吗?");
+        dialog.show();
+        dialog.setOnClickRateDialog(new TwoButtonCenterDialog.OnClickRateDialog() {
+            @Override
+            public void onClickLeft() {
+                dialog.dismiss();
+            }
+
+            @Override
+            public void onClickRight() {
+                dialog.dismiss();
+                MainApplication.getContext().setToken("");
+                MainApplication.getContext().setRoleName("");
+                Intent intent = new Intent();
+                intent.setClass(context, LoginActivity.class);
+                //关键的一句，将新的activity置为栈顶
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+            }
+        });
     }
 
     private MoreFunctionPopup popup;
 
     private void showMoreFunction() {
         if (popup == null) {
-            popup = new MoreFunctionPopup(context, iv_msg, MainApplication.getContext().isManagementPosition());
+            popup = new MoreFunctionPopup(context, iv_msg);
         }
         popup.show();
         popup.setOnButtonClickListener(new MoreFunctionPopup.OnButtonClickListener() {
@@ -161,7 +286,11 @@ public class MainActivity extends BaseActivity {
 
             @Override
             public void onHistoryBtnClick() {
-                toClass(context, HistoryActivity.class);
+                if (MainApplication.getContext().isManagementPosition()) {
+                    toClass(context, HistoryActivity.class);
+                } else {
+                    toClass(context, ReportedActivity.class);
+                }
             }
 
             @Override

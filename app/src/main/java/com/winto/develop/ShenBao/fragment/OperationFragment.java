@@ -32,6 +32,7 @@ public class OperationFragment extends BaseFragment {
     private TextView tv_time;
     private View riskHeader;
     private View layout_empty;
+    private TextView tv_tips;
 
     @Override
     protected void initView() {
@@ -42,8 +43,7 @@ public class OperationFragment extends BaseFragment {
         tv_info = riskHeader.findViewById(R.id.tv_info);
         tv_time = riskHeader.findViewById(R.id.tv_time);
         layout_empty = findViewById(R.id.layout_empty);
-        TextView tv_tips = layout_empty.findViewById(R.id.tv_tips);
-        tv_tips.setText("暂无分配的风险点");
+        tv_tips = layout_empty.findViewById(R.id.tv_tips);
         srl_refresh.setEnableLoadMore(false);
     }
 
@@ -96,23 +96,24 @@ public class OperationFragment extends BaseFragment {
                 riskList.clear();
                 riskList.addAll(bean.getData());
                 adapter.notifyDataSetChanged();
-                showEmptyView(riskList.size() == 0);
+                showEmptyView(riskList.size() == 0, bean.getMsg());
                 srl_refresh.finishRefresh();
             }
 
             @Override
             public void onError(String message) {
-                showEmptyView(true);
+                showEmptyView(true, "网络请求失败");
                 ToastUtil.show(context, message);
                 srl_refresh.finishRefresh();
             }
         });
     }
 
-    private void showEmptyView(boolean b) {
+    private void showEmptyView(boolean b, String tips) {
         if (b) {
             layout_empty.setVisibility(View.VISIBLE);
             lv_list.setVisibility(View.GONE);
+            tv_tips.setText(tips);
         } else {
             layout_empty.setVisibility(View.GONE);
             lv_list.setVisibility(View.VISIBLE);

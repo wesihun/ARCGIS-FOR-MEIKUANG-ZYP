@@ -3,7 +3,6 @@ package com.winto.develop.ShenBao.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -179,36 +178,25 @@ public class TroubleReviewActivity extends BaseActivity {
 
     @Override
     protected void initClick() {
-        iv_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
+        iv_back.setOnClickListener(v -> finish());
+
+        tv_level.setOnClickListener(v -> {
+            List<String> itemList = new ArrayList<>();
+            itemList.add("低风险");
+            itemList.add("一般风险");
+            itemList.add("较大风险");
+            itemList.add("重大风险");
+            initPicker(itemList, tv_level);
         });
 
-        tv_level.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                List<String> itemList = new ArrayList<>();
-                itemList.add("低风险");
-                itemList.add("一般风险");
-                itemList.add("较大风险");
-                itemList.add("重大风险");
-                initPicker(itemList, tv_level);
-            }
-        });
-
-        tv_preson.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                List<String> itemList = new ArrayList<>();
-                itemList.add("李某某");
-                itemList.add("张某某");
-                itemList.add("刘某某");
-                itemList.add("王某某");
-                itemList.add("周某某");
-                initPicker(itemList, tv_preson);
-            }
+        tv_preson.setOnClickListener(v -> {
+            List<String> itemList = new ArrayList<>();
+            itemList.add("李某某");
+            itemList.add("张某某");
+            itemList.add("刘某某");
+            itemList.add("王某某");
+            itemList.add("周某某");
+            initPicker(itemList, tv_preson);
         });
 
         tv_choose_image.setOnClickListener(v -> choosePicture());
@@ -220,33 +208,27 @@ public class TroubleReviewActivity extends BaseActivity {
             return false;
         });
 
-        tv_choose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                List<String> itemList = new ArrayList<>();
-                itemList.add("合格");
-                itemList.add("不合格");
-                initPicker(itemList, tv_choose);
-            }
+        tv_choose.setOnClickListener(v -> {
+            List<String> itemList = new ArrayList<>();
+            itemList.add("合格");
+            itemList.add("不合格");
+            initPicker(itemList, tv_choose);
         });
 
-        tv_ok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (TextUtils.isEmpty(et_check_result.getText().toString().trim())) {
-                    ToastUtil.show(context, "请填写验收结果");
-                    return;
-                }
-                if (TextUtils.isEmpty(et_check_proposal.getText().toString().trim())) {
-                    ToastUtil.show(context, "请填写复查建议");
-                    return;
-                }
-                if (tv_choose.getText().toString().equals("请选择")) {
-                    ToastUtil.show(context, "请选择验收结果");
-                    return;
-                }
-                confirm();
+        tv_ok.setOnClickListener(v -> {
+            if (TextUtils.isEmpty(et_check_result.getText().toString().trim())) {
+                ToastUtil.show(context, "请填写验收结果");
+                return;
             }
+            if (TextUtils.isEmpty(et_check_proposal.getText().toString().trim())) {
+                ToastUtil.show(context, "请填写复查建议");
+                return;
+            }
+            if (tv_choose.getText().toString().equals("请选择")) {
+                ToastUtil.show(context, "请选择整改是否合格");
+                return;
+            }
+            confirm();
         });
     }
 

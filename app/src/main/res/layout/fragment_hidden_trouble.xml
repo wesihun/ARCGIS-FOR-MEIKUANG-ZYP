@@ -2,8 +2,8 @@
 <com.scwang.smart.refresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/srl_refresh"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#eaf1fe">
 
@@ -42,7 +42,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginBottom="5dp"
-                        android:text="风险点数量"
+                        android:text="隐患数量"
                         android:textColor="@color/white"
                         android:textSize="12sp" />
                 </RelativeLayout>
@@ -56,12 +56,12 @@
                         android:id="@+id/tv_count1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="20"
                         android:textColor="@color/red"
-                        android:textSize="28sp"
+                        android:textSize="20sp"
                         app:layout_constraintEnd_toEndOf="@id/tv_count1_label"
                         app:layout_constraintStart_toStartOf="@+id/tv_count1_label"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="20" />
 
                     <TextView
                         android:id="@+id/tv_count1_label"
@@ -81,12 +81,12 @@
                         android:id="@+id/tv_count2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="20"
                         android:textColor="@color/red"
-                        android:textSize="28sp"
+                        android:textSize="20sp"
                         app:layout_constraintEnd_toEndOf="@+id/tv_count2_label"
                         app:layout_constraintStart_toStartOf="@+id/tv_count2_label"
-                        app:layout_constraintTop_toTopOf="@+id/tv_count1" />
+                        app:layout_constraintTop_toTopOf="@+id/tv_count1"
+                        tools:text="20" />
 
                     <TextView
                         android:id="@+id/tv_count2_label"
@@ -106,12 +106,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="20"
                         android:textColor="@color/green"
-                        android:textSize="28sp"
+                        android:textSize="20sp"
                         app:layout_constraintEnd_toEndOf="@+id/tv_count3_label"
                         app:layout_constraintStart_toStartOf="@+id/tv_count3_label"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_count1_label" />
+                        app:layout_constraintTop_toBottomOf="@+id/tv_count1_label"
+                        tools:text="20" />
 
                     <TextView
                         android:id="@+id/tv_count3_label"
@@ -131,12 +131,12 @@
                         android:id="@+id/tv_count4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="20"
                         android:textColor="@color/green"
-                        android:textSize="28sp"
+                        android:textSize="20sp"
                         app:layout_constraintEnd_toEndOf="@+id/tv_count4_label"
                         app:layout_constraintStart_toStartOf="@+id/tv_count4_label"
-                        app:layout_constraintTop_toTopOf="@+id/tv_count3" />
+                        app:layout_constraintTop_toTopOf="@+id/tv_count3"
+                        tools:text="20" />
 
                     <TextView
                         android:id="@+id/tv_count4_label"
@@ -147,9 +147,33 @@
                         android:text="未整改数"
                         android:textColor="@color/maintextcolor"
                         android:textSize="12sp"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_count5_label"
                         app:layout_constraintStart_toEndOf="@+id/tv_count3_label"
                         app:layout_constraintTop_toTopOf="@+id/tv_count3_label" />
+
+                    <TextView
+                        android:id="@+id/tv_count5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/green"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_count5_label"
+                        app:layout_constraintStart_toStartOf="@+id/tv_count5_label"
+                        app:layout_constraintTop_toTopOf="@+id/tv_count3"
+                        tools:text="20" />
+
+                    <TextView
+                        android:id="@+id/tv_count5_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_count"
+                        android:drawablePadding="5dp"
+                        android:text="排查已通过数"
+                        android:textColor="@color/maintextcolor"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_count4_label"
+                        app:layout_constraintTop_toTopOf="@+id/tv_count4_label" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>

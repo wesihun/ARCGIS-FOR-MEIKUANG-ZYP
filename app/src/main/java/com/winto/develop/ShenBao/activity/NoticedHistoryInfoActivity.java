@@ -68,7 +68,7 @@ public class NoticedHistoryInfoActivity extends BaseActivity {
         tv_trouble_info.setText(TextUtils.isEmpty(trouble.getHiddenDangersDescribe()) ? "暂无描述" : trouble.getHiddenDangersDescribe());
         tv_time.setText(trouble.getReportTime());
         tv_shooting_item.setText(trouble.getTroubleshootingItems());
-        tv_hidden_level.setText(trouble.getHiddenDangerLevel());
+        tv_hidden_level.setText(trouble.getReportHiddenDangerLevel());
         tv_control_measures.setText(trouble.getControlMeasures());
         tv_confirm_hidden_level.setText(trouble.getHiddenDangerLevel());
         tv_method.setText(trouble.getMethod());

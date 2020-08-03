@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/tv_name"
@@ -11,51 +12,53 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="10dp"
-        android:layout_toStartOf="@+id/tv_operation"
         android:textColor="@color/maintextcolor"
         android:textSize="14sp"
         tools:text="排查事项" />
+
     <TextView
         android:id="@+id/tv_risk_factor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="15dp"
         android:layout_below="@+id/tv_name"
-        android:layout_toStartOf="@+id/tv_operation"
-        android:textColor="@color/secondtextcolor"
-        android:textSize="12sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:visibility="gone"
+        android:textColor="@color/maintextcolor"
+        android:textSize="14sp"
         tools:text="风险因素" />
 
     <TextView
         android:id="@+id/tv_operation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="15dp"
+        android:layout_below="@+id/tv_risk_factor"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:gravity="center"
-        android:text="未检查"
-        android:textColor="@color/lightred"
-        android:textSize="12sp" />
+        android:textColor="@color/red"
+        android:textSize="14sp"
+        tools:text="未检查" />
 
     <TextView
         android:id="@+id/tv_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/ll_btn"
+        android:layout_below="@+id/tv_operation"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="一般风险"
-        android:textColor="@color/secondtextcolor"
-        android:textSize="14sp" />
+        android:textColor="@color/maintextcolor"
+        android:textSize="14sp"
+        tools:text="一般风险" />
 
     <LinearLayout
         android:id="@+id/ll_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_risk_factor"
+        android:layout_alignBottom="@+id/tv_level"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="15dp"
         android:orientation="horizontal">
@@ -65,14 +68,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:background="@drawable/bg_btn_clickable_blue"
+            android:background="@drawable/bg_blue_corner_solid_50"
             android:gravity="center"
             android:paddingStart="15dp"
             android:paddingTop="5dp"
             android:paddingEnd="15dp"
             android:paddingBottom="5dp"
             android:text="通过"
-            android:textColor="@color/white"
+            android:textColor="@color/blue"
             android:textSize="12sp" />
 
         <TextView
@@ -80,14 +83,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:background="@drawable/bg_btn_clickable_red"
+            android:background="@drawable/bg_orange_corner_solid_50"
             android:gravity="center"
             android:paddingStart="15dp"
             android:paddingTop="5dp"
             android:paddingEnd="15dp"
             android:paddingBottom="5dp"
             android:text="隐患上报"
-            android:textColor="@color/white"
+            android:textColor="@color/red"
             android:textSize="12sp" />
     </LinearLayout>
 
@@ -95,6 +98,5 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_below="@+id/ll_btn"
-        android:layout_marginTop="15dp"
-        android:background="@color/line" />
+        android:layout_marginTop="15dp" />
 </RelativeLayout>

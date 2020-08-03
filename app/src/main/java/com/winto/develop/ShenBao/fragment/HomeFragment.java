@@ -54,7 +54,7 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-        tv_scan = findViewById(R.id.tv_scan);
+        tv_scan = findViewById(R.id.iv_scan);
         tv_fill = findViewById(R.id.tv_fill);
         view_risk_level = findViewById(R.id.view_risk_level);
         tv_major_num = view_risk_level.findViewById(R.id.tv_major_num);

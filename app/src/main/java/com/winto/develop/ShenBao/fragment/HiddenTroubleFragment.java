@@ -47,6 +47,7 @@ public class HiddenTroubleFragment extends BaseFragment {
     private TextView tv_count2;
     private TextView tv_count3;
     private TextView tv_count4;
+    private TextView tv_count5;
     private PieChart pc_chart;
     private CustomListView lv_trouble_cate_list;
     private BarChart bc_chart;
@@ -63,6 +64,7 @@ public class HiddenTroubleFragment extends BaseFragment {
         tv_count2 = findViewById(R.id.tv_count2);
         tv_count3 = findViewById(R.id.tv_count3);
         tv_count4 = findViewById(R.id.tv_count4);
+        tv_count5 = findViewById(R.id.tv_count5);
         pc_chart = findViewById(R.id.pc_chart);
         lv_trouble_cate_list = findViewById(R.id.lv_trouble_cate_list);
         bc_chart = findViewById(R.id.bc_chart);
@@ -124,6 +126,7 @@ public class HiddenTroubleFragment extends BaseFragment {
                 tv_count2.setText(String.valueOf(bean.getData().getCount2()));
                 tv_count3.setText(String.valueOf(bean.getData().getCount3()));
                 tv_count4.setText(String.valueOf(bean.getData().getCount4()));
+                tv_count5.setText(String.valueOf(bean.getData().getCount5()));
                 srl_refresh.finishRefresh();
             }
 

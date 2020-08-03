@@ -86,6 +86,7 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:background="@color/line"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@+id/tv_info" />
 
     <TextView
@@ -101,6 +102,7 @@
         android:paddingBottom="15dp"
         android:text="任务时间"
         android:textColor="@color/maintextcolor"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_info" />
 
@@ -117,6 +119,7 @@
         android:text="2020-5-12"
         android:textColor="@color/maintextcolor"
         android:textSize="14sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/tv_time_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_time_label"
@@ -125,18 +128,22 @@
     <View
         android:id="@+id/view_line1"
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="@color/mainbg"
+        android:layout_height="15dp"
+        android:background="#eaf1fe"
         app:layout_constraintTop_toBottomOf="@+id/tv_time" />
 
     <TextView
         android:id="@+id/tv_trouble_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="10dp"
+        android:background="@color/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:text="风险点列表"
         android:textColor="@color/maintextcolor"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_line1" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_time" />
 </androidx.constraintlayout.widget.ConstraintLayout>

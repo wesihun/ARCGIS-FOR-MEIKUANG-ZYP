@@ -40,6 +40,7 @@ public class CountDataBean extends BaseResponse {
         private int Count2;
         private int Count3;
         private int Count4;
+        private int Count5;
 
         public int getCount1() {
             return Count1;
@@ -71,6 +72,14 @@ public class CountDataBean extends BaseResponse {
 
         public void setCount4(int Count4) {
             this.Count4 = Count4;
+        }
+
+        public int getCount5() {
+            return Count5;
+        }
+
+        public void setCount5(int count5) {
+            Count5 = count5;
         }
     }
 }

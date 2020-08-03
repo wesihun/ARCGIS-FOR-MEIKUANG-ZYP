@@ -74,6 +74,7 @@ public class TroubleListBean extends BaseResponse {
         private String TBUserName;
         private String CreateTime;
         private String ImageUrl;
+        private String ControlMeasures;
         private String IsSupervisor;
         private int DeleteMark;
         private int PushMark;
@@ -87,6 +88,14 @@ public class TroubleListBean extends BaseResponse {
 
         public void setId(String Id) {
             this.Id = Id;
+        }
+
+        public String getControlMeasures() {
+            return ControlMeasures;
+        }
+
+        public void setControlMeasures(String controlMeasures) {
+            ControlMeasures = controlMeasures;
         }
 
         public String getPosition() {

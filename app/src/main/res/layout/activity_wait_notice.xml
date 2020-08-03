@@ -139,9 +139,9 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
-                    tools:text="xxx"
                     android:textColor="@color/maintextcolor"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:text="xxx" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -162,9 +162,9 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
-                    tools:text="事故类型"
                     android:textColor="@color/maintextcolor"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:text="事故类型" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -185,9 +185,9 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
-                    tools:text="2020-5-16"
                     android:textColor="@color/maintextcolor"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:text="2020-5-16" />
 
                 <RelativeLayout
                     android:id="@+id/rl_is_supervisor"
@@ -275,7 +275,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_level"
                     android:layout_marginTop="20dp"
-                    android:text="治理方法"
+                    android:text="管控措施"
                     android:textColor="@color/maintextcolor"
                     android:textSize="14sp" />
 

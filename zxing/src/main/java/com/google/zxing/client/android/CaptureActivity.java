@@ -34,7 +34,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -44,6 +43,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -103,6 +103,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     private CaptureActivityHandler handler;
     private Result savedResultToShow;
     private ViewfinderView viewfinderView;
+    private ImageView iv_back;
     private Result lastResult;
     private boolean hasSurface;
     private boolean copyToClipboard;
@@ -146,6 +147,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         beepManager = new BeepManager(this);
         ambientLightManager = new AmbientLightManager(this);
         TextView tv_light = findViewById(R.id.tv_light);
+        iv_back = findViewById(R.id.iv_back);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
         riskId = getIntent().getStringExtra("riskId");
         scanType = getIntent().getIntExtra("scanType", 1);
@@ -159,6 +161,8 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
                 e.printStackTrace();
             }
         });
+
+        iv_back.setOnClickListener(v -> finish());
     }
 
     public boolean checkPermission(@NonNull String permission) {
@@ -369,7 +373,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         super.onDestroy();
     }
 
-    @Override
+   /* @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         switch (keyCode) {
             case KeyEvent.KEYCODE_BACK:
@@ -396,7 +400,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
                 return true;
         }
         return super.onKeyDown(keyCode, event);
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -576,10 +580,8 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     }
 
     // Put up our own UI for how to handle the decoded contents.
-    private void handleDecodeInternally(Result rawResult, ResultHandler
-            resultHandler, Bitmap barcode) {
-
-        maybeSetClipboard(resultHandler);
+    private void handleDecodeInternally(Result rawResult, ResultHandler resultHandler, Bitmap barcode) {
+//        maybeSetClipboard(resultHandler);
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -589,20 +591,23 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         }
 
         //TODO 有可能是扫码结果
-        viewfinderView.setVisibility(View.GONE);
         try {
             ScanResultBean bean = new Gson().fromJson(rawResult.toString(), ScanResultBean.class);
             if (scanType == 1) {
+                viewfinderView.setVisibility(View.GONE);
                 gotoActivity(bean);
             } else {
                 if (riskId.equals(bean.getRiskBH())) {
+                    viewfinderView.setVisibility(View.GONE);
                     gotoActivity(bean);
                 } else {
                     Toast.makeText(this, "请扫描该风险点对应的二维码", Toast.LENGTH_SHORT).show();
+                    delayExecution();
                 }
             }
         } catch (Exception e) {
             Toast.makeText(this, "请扫描正确的风险点二维码", Toast.LENGTH_SHORT).show();
+            delayExecution();
         }
     }
 
@@ -613,6 +618,20 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
                 .navigation();
         finish();
     }
+
+    Handler handler1 = new Handler();
+
+    private void delayExecution() {
+        handler1.postDelayed(runnable, 2000);
+    }
+
+    Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            handler.state = CaptureActivityHandler.State.PREVIEW;
+            cameraManager.requestPreviewFrame(handler.decodeThread.getHandler(), R.id.decode);
+        }
+    };
 
     // Briefly show the contents of the barcode, then handle the result outside Barcode Scanner.
     private void handleDecodeExternally(Result rawResult, ResultHandler

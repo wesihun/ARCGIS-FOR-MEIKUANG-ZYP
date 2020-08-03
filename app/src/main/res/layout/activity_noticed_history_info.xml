@@ -264,10 +264,11 @@
                 <RelativeLayout
                     android:id="@+id/rl_is_supervisor"
                     android:layout_width="match_parent"
-                    android:layout_marginTop="12dp"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/view_line1"
-                    android:visibility="gone"
-                    android:layout_height="wrap_content">
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -352,7 +353,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/tv_confirm_hidden_level"
                     android:layout_marginStart="15dp"
-                    android:text="确认风险等级"
+                    android:text="确认隐患等级"
                     android:textColor="@color/maintextcolor"
                     android:textSize="14sp" />
 

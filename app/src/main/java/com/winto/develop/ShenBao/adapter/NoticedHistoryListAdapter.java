@@ -41,7 +41,7 @@ public class NoticedHistoryListAdapter extends RecyclerView.Adapter<NoticedHisto
         holder.tv_name.setText(bean.getTroubleshootingItems());
         holder.tv_info.setText(TextUtils.isEmpty(bean.getHiddenDangersDescribe()) ? "暂无描述" : bean.getHiddenDangersDescribe());
         holder.tv_personnel.setText(bean.getPersonName());
-        holder.tv_level.setText(bean.getHiddenDangerLevel());
+        holder.tv_level.setText(bean.getReportHiddenDangerLevel());
         holder.tv_time.setText(bean.getCreateTime());
         holder.ll_is_supervisor.setVisibility("1".equals(bean.getIsSupervisor()) ? View.VISIBLE : View.GONE);
 
